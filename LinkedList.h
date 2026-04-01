@@ -34,7 +34,24 @@ public:
         newNode->next = head;
         head = newNode;
     }
+    
+    void insertAtEnd(T value) {
+    Node<T>* newNode = new Node<T>(value);
 
+    if (head == nullptr) {
+        head = newNode;
+        return;
+    }
+
+    Node<T>* current = head;
+
+    while (current->next != nullptr) {
+        current = current->next;
+    }
+
+    current->next = newNode;
+   }
+   
     Node<T>* search(T value) const {
         Node<T>* current = head;
         while (current != nullptr) {
@@ -76,6 +93,9 @@ public:
         }
         cout << " -> nullptr" << endl;
     }
+    
+    
+
 };
 
 #endif

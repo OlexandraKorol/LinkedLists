@@ -3,7 +3,8 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="LinkedList.h"/>
+    <File Name="README.md" ExcludeProjConfig="Debug;"/>
+    <File Name="LinkedList.h" ExcludeProjConfig="Debug;"/>
     <File Name="main.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
