@@ -83,6 +83,56 @@ public:
             current = current->next;
         }
     }
+    
+    size_t getSize() const {
+        size_t counter{0};
+
+        Node<T>* current = head;
+
+        while (current != nullptr) {
+            counter++;
+            current = current->next;
+        }
+
+        return counter;
+    }
+    
+    void reverse() {
+
+        Node<T>* prev = nullptr;
+        Node<T>* current = head;
+        Node<T>* nextNode = nullptr;
+
+        while (current != nullptr) {
+            nextNode = current->next;
+            current->next = prev;  
+            prev = current;     
+            current = nextNode;   
+        }
+
+        head = prev;
+    }
+    
+    bool detectCycle() const {
+        
+    Node<T>* slow = head;
+    Node<T>* fast = head;
+
+    while (fast != nullptr && fast->next != nullptr) {
+        slow = slow->next;          
+        fast = fast->next->next;  
+
+        if (slow == fast) {
+            return true;
+        }
+    }
+
+    return false;  
+    
+        
+    }
+    
+
 
     void print() const {
         Node<T>* current = head;
@@ -94,8 +144,22 @@ public:
         cout << " -> nullptr" << endl;
     }
     
-    
+    Node<T>* getNthFromEnd(size_t n) const {
+    Node<T>* slow = head;
+    Node<T>* fast = head;
 
+    for (size_t i = 0; i < n; i++) {
+        if (fast == nullptr) return nullptr; 
+        fast = fast->next;
+    };
+
+    while (fast != nullptr) {
+        slow = slow->next;
+        fast = fast->next;
+    };
+
+    return slow;
+    }
 };
 
 #endif
