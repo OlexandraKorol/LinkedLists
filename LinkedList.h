@@ -27,7 +27,7 @@ public:
             delete current;
             current = next;
         }
-    }
+    }    
 
     void insertAtBeginning(T value) {
         Node<T>* newNode = new Node<T>(value);
