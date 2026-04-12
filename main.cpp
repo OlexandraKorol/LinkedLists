@@ -18,37 +18,39 @@ int main() {
 
 
     
-//  InsertAtEnd(10) method test
+//  InsertAtEnd() method test
 
-//    list.insertAtEnd(10);
-//    list.print();
-//
-//    list.insertAtEnd(20);
-//    list.insertAtEnd(30);
-//    list.print();
-//
-//    list.insertAtBeginning(5);
-//    list.print(); 
-//
-//    list.insertAtEnd(40);
-//    list.print();
+    list.insertAtEnd(10);
+    list.print();
+
+    list.insertAtEnd(20);
+    list.insertAtEnd(30);
+    list.print();
+
+    list.insertAtBeginning(5);
+    list.print(); 
+
+    list.insertAtEnd(40);
+    list.print();
     
     
 //   getSize() method test
-//    list.print();
-//    cout<< list.getSize() << endl;
+
+    list.print();
+    cout<< list.getSize() << endl;
     
-// reverse() method test
-//    list.insertAtEnd(20);
-//    list.insertAtEnd(30);
-//    list.print();
-//    list.reverse();
-//    list.print();
+//  reverse() method test
+
+    list.insertAtEnd(20);
+    list.insertAtEnd(30);
+    list.print();
+    list.reverse();
+    list.print();
     
 // detectCycle() method test
 
-//    list.print();
-//    cout<< list.detectCycle() << endl;
+    list.print();
+    cout<< list.detectCycle() << endl;
     
 // getNthFromEnd method test
 
